@@ -1,0 +1,13 @@
+{
+  "projectName": "ciqtek-input",
+  "projectOwner": "tigoo",
+  "repoType": "github",
+  "repoHost": "https://github.com/ciqtek/qmc-input",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [],
+  "contributorsPerLine": 7
+}

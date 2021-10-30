@@ -1,0 +1,43 @@
+<!--
+ * @Author: tigoo
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /package-test/ciqtek-input/demo/test.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="inputArea">
+        <p>{{date}} in {{room}}</p>
+        <p ref="people">{{who}}</p>
+        <CiqtekInput></CiqtekInput>
+        <input type="text" v-model="who">
+        <button @click="changeRoom">修改room</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="../dist/ciqtek-input.min.js"></script>
+    <script>
+        var data = {date: '202110282255',room: '书房',who: 'tianhao'};
+        function changeRoom(){
+            vm.room += Math.random()*100
+            console.log(vm.$refs.people)
+        }
+        var vm = new Vue({
+            el: '#inputArea',
+            data,
+            methods: {
+                // changeRoom:function(){
+                //     this.who = 'tianhao' + Math.random()
+                // },
+                changeRoom
+            },
+        })
+    </script>
+</body>
+</html>
